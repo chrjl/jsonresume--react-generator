@@ -9,12 +9,16 @@ services:
   dev:
     image: node:lts-slim
     tty: true
-    working_dir: ${DOCKER_WORKDIR:-/tmp/app}
+    working_dir: ${DOCKER_WORKDIR}
     entrypoint: ['npm', 'run', 'dev', '--', '--host']
     volumes:
       - type: bind
         source: .
-        target: ${DOCKER_WORKDIR:-/tmp/app}
+        target: ${DOCKER_WORKDIR}
+      - type: bind
+        source: ${DOCKER_RESUME_FILE}
+        target: ${DOCKER_WORKDIR}/src/assets/resume.json
+        read_only: true
     ports:
       - 5173
     networks:
