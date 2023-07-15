@@ -1,0 +1,25 @@
+name: ${DOCKER_PROJECT_NAME}
+
+networks:
+  external:
+    name: ${DOCKER_NETWORK}
+    external: true
+
+services:
+  dev:
+    image: node:lts-slim
+    tty: true
+    working_dir: ${DOCKER_WORKDIR:-/tmp/app}
+    entrypoint: ['npm', 'run', 'dev', '--', '--host']
+    volumes:
+      - type: bind
+        source: .
+        target: ${DOCKER_WORKDIR:-/tmp/app}
+    ports:
+      - 5173
+    networks:
+      - external
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.${DOCKER_PROJECT_NAME}.rule=Host(`${DOCKER_PROJECT_NAME}.localhost`)'
+      - 'traefik.http.services.${DOCKER_PROJECT_NAME}.loadbalancer.server.port=5173'
