@@ -1,0 +1,21 @@
+:root {
+  --paper-width: 8.5in;
+  --paper-height: 11in;
+  --paper-margin: 0.25in;
+  --content-height: calc(var(--paper-height) - 2 * var(--paper-margin));
+  --content-width: calc(var(--paper-width) - 2 * var(--paper-margin));
+
+  background-color: black;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+}
+
+.paper {
+  background-color: white;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+  width: var(--paper-width);
+  padding: var(--paper-margin);
+  min-height: var(--paper-height);
+}
