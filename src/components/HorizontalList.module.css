@@ -1,0 +1,18 @@
+.container {
+  & ul {
+    padding-left: 0;
+    display: inline;
+  }
+
+  & li {
+    display: inline;
+
+    &:not(:first-child) {
+      &::before {
+        content: '|';
+        font-weight: bold;
+        padding: 0 0.5em;
+      }
+    }
+  }
+}
