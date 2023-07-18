@@ -4,6 +4,7 @@ import './styles/App.css';
 import Basics from './components/Basics';
 import Education from './components/Education';
 import Projects from './components/Projects';
+import Certificates from './components/Certificates';
 
 import resume from './assets/resume.json';
 
@@ -20,6 +21,7 @@ function App() {
       <Basics data={resume.basics} />
       <Education data={resume.education} />
       <Projects data={resume.projects} />
+      <Certificates data={resume.certificates} />
     </main>
   );
 }
