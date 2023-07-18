@@ -47,7 +47,7 @@ If running on a bridge network, port 5173 is published.
   ```console
   $ docker port $(docker ps -lq)
   ```
-  
+
 - Access the app at `http://localhost:<port>`
 
 If running behind Traefik (running on port 8000, for example): access the app at `http://${DOCKER_PROJECT_NAME}.localhost:8000`
