@@ -2,6 +2,7 @@ import './styles/paper.css';
 import './styles/App.css';
 
 import Basics from './components/Basics';
+import Education from './components/Education';
 
 import resume from './assets/resume.json';
 
@@ -16,6 +17,7 @@ function App() {
       <h2>{resume.basics.label}</h2>
 
       <Basics data={resume.basics} />
+      <Education data={resume.education} />
     </main>
   );
 }
