@@ -5,6 +5,7 @@ import Basics from './components/Basics';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
+import Interests from './components/Interests';
 
 import resume from './assets/resume.json';
 
@@ -22,6 +23,7 @@ function App() {
       <Education data={resume.education} />
       <Projects data={resume.projects} />
       <Certificates data={resume.certificates} />
+      <Interests data={resume.interests} />
     </main>
   );
 }
