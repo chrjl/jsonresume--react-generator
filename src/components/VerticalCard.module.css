@@ -1,0 +1,49 @@
+.container {
+  display: inline-block;
+  vertical-align: top;
+  width: 3.675in;
+  padding-right: 0.25in;
+  margin-top: 1em;
+}
+
+.heading {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /* the clearfix: force an element to clear its children */
+  /* https://css-tricks.com/snippets/css/clear-fix/ */
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  & span {
+    line-height: 11pt;
+
+    &.title {
+      font-size: 11pt;
+      float: left;
+    }
+
+    &.subtitle {
+      font-size: 9pt;
+      opacity: 60%;
+      float: right;
+    }
+  }
+}
+
+.description {
+  & a {
+    display: block;
+    font-size: 9pt;
+  }
+}
+
+.highlights {
+  & ul {
+    list-style: outside;
+    padding-left: 1.25em; /* default is 2.5em (40px) */
+  }
+}
