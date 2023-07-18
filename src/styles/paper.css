@@ -13,6 +13,7 @@
 .paper {
   background-color: white;
   margin: 0 auto;
+  white-space: pre-line;
 
   box-sizing: border-box;
   width: var(--paper-width);
