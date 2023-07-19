@@ -3,6 +3,7 @@ import './styles/App.css';
 
 import Basics from './components/Basics';
 import Skills from './components/Skills';
+import Languages from './components/Languages';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
@@ -27,6 +28,7 @@ function App() {
       <Education data={resume.education} />
       <Projects data={resume.projects} />
       <Certificates data={resume.certificates} />
+      <Languages data={resume.languages} />
       <Interests data={resume.interests} />
     </main>
   );
