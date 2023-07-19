@@ -1,0 +1,10 @@
+.container {
+  vertical-align: middle;
+}
+
+.term {
+  vertical-align: top;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-right: 2em;
+}
