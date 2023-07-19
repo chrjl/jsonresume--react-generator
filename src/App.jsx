@@ -19,6 +19,8 @@ function App() {
       <h1>{resume.basics.name}</h1>
       <h2>{resume.basics.label}</h2>
 
+      <hr className="paper-size" />
+
       <Basics data={resume.basics} />
       <Education data={resume.education} />
       <Projects data={resume.projects} />

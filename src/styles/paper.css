@@ -14,9 +14,42 @@
   background-color: white;
   margin: 0 auto;
   white-space: pre-line;
+  position: relative;
 
   box-sizing: border-box;
   width: var(--paper-width);
   padding: var(--paper-margin);
   min-height: var(--paper-height);
+}
+
+hr.paper-size {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  left: 0;
+  top: calc(var(--paper-height) - var(--paper-margin));
+  height: var(--paper-margin);
+  width: var(--paper-width);
+
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  z-index: 10;
+
+  &::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    content: 'first page bottom margin';
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+@media print {
+  hr.paper-size {
+    visibility: hidden;
+  }
 }
