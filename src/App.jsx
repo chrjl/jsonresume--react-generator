@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Interests from './components/Interests';
+import Work from './components/Work';
 
 import resume from './assets/resume.json';
 
@@ -28,6 +29,7 @@ function App() {
       <Education data={resume.education} />
       <Projects data={resume.projects} />
       <Certificates data={resume.certificates} />
+      <Work data={resume.work} />
       <Languages data={resume.languages} />
       <Interests data={resume.interests} />
     </main>
