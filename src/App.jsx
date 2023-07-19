@@ -2,6 +2,7 @@ import './styles/paper.css';
 import './styles/App.css';
 
 import Basics from './components/Basics';
+import Skills from './components/Skills';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
@@ -22,6 +23,7 @@ function App() {
       <hr className="paper-size" />
 
       <Basics data={resume.basics} />
+      <Skills data={resume.skills} />
       <Education data={resume.education} />
       <Projects data={resume.projects} />
       <Certificates data={resume.certificates} />
