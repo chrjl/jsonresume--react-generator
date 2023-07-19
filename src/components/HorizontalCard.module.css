@@ -1,0 +1,19 @@
+.container {
+  margin-top: 1em;
+}
+
+.title {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin-left: 2em;
+}
+
+.highlights {
+  & ul {
+    list-style: outside;
+    padding-left: 2.5em;
+  }
+}
