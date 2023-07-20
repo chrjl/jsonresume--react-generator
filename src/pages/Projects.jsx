@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 import ReactMarkdown from 'react-markdown';
-import HorizontalList from './HorizontalList';
-import VerticalCard from './VerticalCard';
+import HorizontalList from '../components/HorizontalList';
+import VerticalCard from '../components/VerticalCard';
 
 function Projects({ data }) {
   return (

@@ -1,15 +1,15 @@
 import './styles/paper.css';
 import './styles/App.css';
 
-import Basics from './components/Basics';
-import Skills from './components/Skills';
-import Languages from './components/Languages';
-import Education from './components/Education';
-import Projects from './components/Projects';
-import Certificates from './components/Certificates';
-import Interests from './components/Interests';
-import Work from './components/Work';
-import Experience from './components/Experience';
+import Basics from './pages/Basics';
+import Certificates from './pages/Certificates';
+import Education from './pages/Education';
+import Experience from './pages/Experience';
+import Interests from './pages/Interests';
+import Languages from './pages/Languages';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Work from './pages/Work';
 
 import resume from './assets/resume.json';
 
@@ -25,15 +25,15 @@ function App() {
 
       <hr className="paper-size" />
 
-      <Basics data={resume.basics} />
-      <Skills data={resume.skills} />
-      <Education data={resume.education} />
-      <Experience data={resume.experience} />
-      <Projects data={resume.projects} />
-      <Certificates data={resume.certificates} />
-      <Work data={resume.work} />
-      <Languages data={resume.languages} />
-      <Interests data={resume.interests} />
+      {resume.basics && <Basics data={resume.basics} />}
+      {resume.skills && <Skills data={resume.skills} />}
+      {resume.languages && <Languages data={resume.languages} />}
+      {resume.projects && <Projects data={resume.projects} />}
+      {resume.experience && <Experience data={resume.experience} />}
+      {resume.education && <Education data={resume.education} />}
+      {resume.certificates && <Certificates data={resume.certificates} />}
+      {resume.work && <Work data={resume.work} />}
+      {resume.interests && <Interests data={resume.interests} />}
     </main>
   );
 }

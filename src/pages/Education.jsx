@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import VerticalCard from './VerticalCard';
-import HorizontalList from './HorizontalList';
+import VerticalCard from '../components/VerticalCard';
+import HorizontalList from '../components/HorizontalList';
 
 function Education({ data }) {
   return (

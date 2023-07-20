@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import HorizontalList from './HorizontalList';
-import VerticalCard from './VerticalCard';
+import HorizontalList from '../components/HorizontalList';
+import VerticalCard from '../components/VerticalCard';
 
 function Certificates({ data }) {
   return (

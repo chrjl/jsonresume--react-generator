@@ -1,4 +1,4 @@
-import HorizontalList from './HorizontalList';
+import HorizontalList from '../components/HorizontalList';
 
 function Basics({ data }) {
   const { location, email, phone, url, profiles } = data;

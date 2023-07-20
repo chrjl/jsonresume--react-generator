@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 import ReactMarkdown from 'react-markdown';
-import HorizontalCard from './HorizontalCard';
-import HorizontalList from './HorizontalList';
+import HorizontalCard from '../components/HorizontalCard';
+import HorizontalList from '../components/HorizontalList';
 
 function Work({ data }) {
   return (

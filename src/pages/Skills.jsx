@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import DefinitionTable from './DefinitionTable';
+import DefinitionTable from '../components/DefinitionTable';
 
 function Skills({ data }) {
   return (

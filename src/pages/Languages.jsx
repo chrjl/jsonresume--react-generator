@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import ReactMarkdown from 'react-markdown';
-import DefinitionTable from './DefinitionTable';
+import DefinitionTable from '../components/DefinitionTable';
 
 function Languages({ data }) {
   const description = data

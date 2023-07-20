@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import VerticalCard from './VerticalCard';
+import VerticalCard from '../components/VerticalCard';
 
 function Interests({ data }) {
   return (

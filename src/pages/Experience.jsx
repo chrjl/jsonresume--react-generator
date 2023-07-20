@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import ReactMarkdown from 'react-markdown';
-import DefinitionTable from './DefinitionTable';
+import DefinitionTable from '../components/DefinitionTable';
 import { WorkCard } from './Work';
 
 function Experience({ data }) {
