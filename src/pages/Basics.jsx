@@ -1,5 +1,7 @@
 import HorizontalList from '../components/HorizontalList';
 
+import * as basics from './Basics.module.css';
+
 function Basics({ data }) {
   const { location, email, phone, url, profiles } = data;
   const { city, region, countryCode: country } = location;
@@ -17,7 +19,7 @@ function Basics({ data }) {
     : [];
 
   return (
-    <section id="basics">
+    <section id="basics" className={basics.container}>
       <div id="contact">
         <HorizontalList items={[...contactItems, ...profileItems]} />
       </div>

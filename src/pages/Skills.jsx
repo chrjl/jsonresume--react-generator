@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 
 import DefinitionTable from '../components/DefinitionTable';
 
+import * as skills from './Skills.module.css';
+
 function Skills({ data }) {
   return (
-    <section id="skills">
+    <section id="skills" className={skills.container}>
       <DefinitionTable
         items={data.map(({ name, keywords }) => ({
           term: name,

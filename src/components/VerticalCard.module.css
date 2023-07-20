@@ -3,7 +3,7 @@
   vertical-align: top;
   width: 3.675in;
   padding-right: 0.25in;
-  margin-top: 1em;
+  margin-bottom: 2.5em;
 }
 
 .heading {
@@ -42,8 +42,14 @@
 }
 
 .highlights {
+  margin-top: 1em;
+
   & ul {
     list-style: outside;
     padding-left: 1.25em; /* default is 2.5em (40px) */
+  }
+
+  & li:not(:last-child) {
+    padding-bottom: 0.25em;
   }
 }

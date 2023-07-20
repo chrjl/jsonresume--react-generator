@@ -6,13 +6,13 @@ h1 {
 h2 {
   font-size: 14pt;
   font-weight: bold;
-  margin-bottom: 0.5em;
 }
 
 h3 {
-  font-size: 14pt;
+  font-size: 15pt;
   font-weight: bold;
   margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 strong {
@@ -23,3 +23,24 @@ em {
   font-style: italic;
 }
 
+#certificates,
+#interests,
+#work,
+#languages {
+  opacity: 20%;
+  display: none;
+}
+
+#skills,
+#languages {
+  & td:first-child {
+    width: 1.5in;
+  }
+}
+
+/* Hack to remove VerticalCard bottom padding from container */
+
+#projects,
+#education {
+  margin-bottom: -2.5em;
+}

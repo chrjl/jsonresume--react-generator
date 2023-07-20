@@ -1,10 +1,15 @@
 .container {
   vertical-align: middle;
-}
+  margin: 1em 0;
 
-.term {
-  vertical-align: top;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-right: 2em;
+  & tr:not(:last-child) td {
+    padding-bottom: 0.5em;
+  }
+
+  & td.term {
+    vertical-align: top;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-right: 2em;
+  }
 }

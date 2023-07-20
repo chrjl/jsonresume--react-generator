@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as verticalCard from './VerticalCard.module.css';
 
 function VerticalCard(props) {
-  const { title, subtitle, keywords, description, highlights } = props;
+  const { title, subtitle, description, highlights = [] } = props;
   return (
     <div className={verticalCard.container}>
       <div className={verticalCard.heading}>
@@ -12,15 +12,15 @@ function VerticalCard(props) {
       </div>
 
       <div className={verticalCard.description}>{description}</div>
-      <div className={verticalCard.highlights}>
-        {highlights && (
+      {highlights.length > 0 && (
+        <div className={verticalCard.highlights}>
           <ul>
             {highlights.map((highlight, index) => (
               <li key={index}>{highlight}</li>
             ))}
           </ul>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

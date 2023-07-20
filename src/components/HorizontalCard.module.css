@@ -1,5 +1,5 @@
 .container {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .title {
@@ -11,7 +11,13 @@
   margin-left: 2em;
 }
 
+.description {
+  margin-top: 0.5em;
+}
+
 .highlights {
+  margin-top: 0.5em;
+
   & ul {
     list-style: outside;
     padding-left: 2.5em;
