@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import './styles/paper.css';
 import './styles/App.css';
 
@@ -11,17 +13,26 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Work from './pages/Work';
 
-import resume from './assets/resume.json';
-
-if (resume.basics.name) {
-  document.title += ` | ${resume.basics.name}`;
-}
+const fetchSample = await fetch('resume.json');
+const sample = await fetchSample.json();
 
 function App() {
+  const [resume, setResume] = useState(sample);
+
+  if (resume?.basics?.name) {
+    document.title = `Resume | ${resume.basics.name}`;
+  } else {
+    document.title = 'Resume';
+  }
+
   return (
     <main className="paper">
-      <h1>{resume.basics.name}</h1>
-      <h2>{resume.basics.label}</h2>
+      {resume.basics && (
+        <>
+          <h1>{resume.basics.name}</h1>
+          {resume.basics.label && <h2>{resume.basics.label}</h2>}
+        </>
+      )}
 
       <hr className="paper-size" />
 
