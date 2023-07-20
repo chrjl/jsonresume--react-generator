@@ -10,7 +10,7 @@ Resume sections are rendered as React Components that uniformly take in `data` p
 <Basics data={resume.basics} />
 ```
 
-Control the visibility of sections by setting `display: none` in global CSS (for example `App.css`).
+Control the visibility of sections, or override styles, using the app global `App.css` with the `id` of the section (see: [[authoring]]).
 
 | Content view      | Resume section                                           |
 | ----------------- | -------------------------------------------------------- |

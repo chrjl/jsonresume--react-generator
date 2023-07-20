@@ -31,9 +31,34 @@ Accept "anything that can be rendered" (`PropTypes.node`) as props and format us
   };
   ```
 
-  **Heading line:** `<div>` containing a left-aligned title `<span>` and right-aligned subtitle `<span>`. Clearfix to expand the height of the div for alignment of the following elements.
+  **Heading line:** Left-aligned title and right-aligned subtitle `<span>`s in a container `<div>`. Clearfix to prevent collapsing of the container element (expand to contain child elements).
 
   **Description:** Freeform description `<div>` followed by `<ul>` list of highlights
 
-- [ ] `HorizontalCard`: full-width components for single column layout
-- [ ] `DefinitionTable`: keyword `<span>` and list of descriptors `<span>` for tabular layout
+- [x] `HorizontalCard`: full-width components for single column layout
+
+  ```js
+  HorizontalCard.propTypes = {
+    title: PropTypes.node.isRequired,
+    subtitle: PropTypes.node,
+    description: PropTypes.node,
+    highlights: PropTypes.arrayOf(PropTypes.node),
+  };
+  ```
+
+  **Heading line:** Title and subtitle `<span>`s.
+
+  **Description:** Freeform description `<div>` followed by `<ul>` list of highlights
+
+- [x] `DefinitionTable`: two-column table
+
+  ```js
+  DefinitionItem.propTypes = {
+    term: PropTypes.node,
+    description: PropTypes.node,
+  };
+
+  DefinitionTable.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape(DefinitionItem.propTypes)),
+  };
+  ```

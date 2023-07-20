@@ -9,13 +9,26 @@ Tags
 
 > TODO: [[components]]
 >
-> - [ ] `HorizontalCard`
-> - [ ] `DefinitionCard`
+> - [x] `HorizontalCard`
+> - [x] `DefinitionTable`
+> - [ ] Turn `VerticalCard` components (`Education`, `Projects`) into flex containers
 
 > TODO: [[resume]] schema
 >
-> - [ ] Projects
-> - [ ] Experience
+> - [ ] Projects: url - split comma-separated list
+> - [ ] Experience &rarr; `<WorkCard>`
+> - [ ] Work: department
+
+> TODO: toggles
+>
+> - [ ] paper preview: `hr.paper-size`
+> - [ ] section visibility
+> - [ ] section dimming
+> - [ ] filter `hidden` attribute in JSON items
+
+> TODO: build
+>
+> - [ ] migrate to Typescript
 
 ## App
 
@@ -23,37 +36,7 @@ Render React (ab)using CSS to force the app into paper size (using border box si
 
 ### Authoring
 
-- `prop-types`
-  : Define `Component.propTypes`
-
-- `react-markdown`
-  : Create `ReactMarkdown` components from strings imported from JSON.
-
-  ```jsx
-  // import ReactMarkdown from 'react-markdown';
-
-  <ReactMarkdown children={content} />
-  ```
-
-  See `#text-formatting` section in [[formatting]].
-
-- Hide or dim sections using global css and section id.
-
-  ```css
-  /* styles/App.css */
-
-  #hidden-from-layout {
-    display: none;
-  }
-
-  #rendered-but-visibility-hidden {
-    visibility: hidden;
-  }
-
-  #dimmed-section {
-    opacity: 20%;
-  }
-  ```
+[[authoring]]
 
 ### Styling
 
@@ -61,7 +44,6 @@ CSS global styles
 
 - [x] CSS reset
 - [x] CSS paper size
-- [x] `white-space: pre-line` to allow `\n` line breaks
 
 Component styles
 
@@ -74,6 +56,7 @@ Component styles
 Text formatting
 
 - [x] `react-markdown` to allow formatting in `resume.json` via markdown (rather than HTML with `dangerouslySetInnerHTML`)
+- [x] `white-space: pre-line` to allow `\n` line breaks
 
 Absolute units on mobile
 
