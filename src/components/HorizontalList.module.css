@@ -1,4 +1,6 @@
 .container {
+  white-space: nowrap;
+
   & ul {
     padding-left: 0;
     display: inline;

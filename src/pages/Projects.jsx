@@ -9,28 +9,34 @@ function Projects({ data }) {
     <section id="projects">
       <h3>Portfolio highlights</h3>
 
-      {data.map((project, index) => (
-        <VerticalCard
-          key={index}
-          title={project.name}
-          subtitle={<HorizontalList items={project.keywords} />}
-          description={
-            project.url
-              ? [
-                  project.description,
-                  ...project.url.map((url, index) => (
-                    <a key={index} href={url}>
-                      {url}
-                    </a>
-                  )),
-                ]
-              : project.description
-          }
-          highlights={project.highlights.map((highlight) => (
-            <ReactMarkdown children={highlight} />
-          ))}
-        />
-      ))}
+      {data.map(
+        ({ name, keywords, description, url = [], highlights = [] }, index) => (
+          <VerticalCard
+            key={index}
+            title={name}
+            subtitle={<HorizontalList items={keywords} />}
+            description={
+              <>
+                {url && (
+                  <div className={projects.url}>
+                    {url.split(',').map((url, index) => (
+                      <a key={index} href={url.trim()}>
+                        {url.trim()}
+                      </a>
+                    ))}
+                  </div>
+                )}
+                {description && (
+                  <div className={projects.description}>{description}</div>
+                )}
+              </>
+            }
+            highlights={highlights.map((highlight) => (
+              <ReactMarkdown children={highlight} />
+            ))}
+          />
+        )
+      )}
     </section>
   );
 }
@@ -38,7 +44,7 @@ function Projects({ data }) {
 Projects.propTypes = PropTypes.arrayOf(
   PropTypes.shape({
     name: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string),
+    keywords: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
     url: PropTypes.arrayOf(PropTypes.string),
     highlights: PropTypes.arrayOf(PropTypes.string),

@@ -44,8 +44,12 @@ CategoricalDetails.propTypes = {
 };
 
 Experience.propTypes = {
-  ...WorkCard.propTypes,
-  ...CategoricalDetails.propTypes,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      ...WorkCard.propTypes,
+      ...CategoricalDetails.propTypes,
+    })
+  ),
 };
 
 export default Experience;

@@ -11,7 +11,9 @@ function Basics({ data }) {
   ];
 
   const profileItems = profiles
-    ? profiles.map((profile) => <a href={profile.url}>{profile.url}</a>)
+    ? profiles
+        .filter((profile) => profile.url)
+        .map((profile) => <a href={profile.url}>{profile.url}</a>)
     : [];
 
   return (
