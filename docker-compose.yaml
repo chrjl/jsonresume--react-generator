@@ -17,7 +17,7 @@ services:
         target: ${DOCKER_WORKDIR}
       - type: bind
         source: ${DOCKER_RESUME_FILE}
-        target: ${DOCKER_WORKDIR}/src/assets/resume.json
+        target: ${DOCKER_WORKDIR}/public/resume.json
         read_only: true
     ports:
       - 5173

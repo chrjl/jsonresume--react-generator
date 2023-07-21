@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './styles/paper.css';
 import './styles/App.css';
 
+import NavBar from './components/NavBar';
 import Basics from './pages/Basics';
 import Certificates from './pages/Certificates';
 import Education from './pages/Education';
@@ -38,26 +39,30 @@ function App() {
   }
 
   return (
-    <main className="paper">
-      {resume.basics && (
-        <>
-          <h1>{resume.basics.name}</h1>
-          {resume.basics.label && <h2>{resume.basics.label}</h2>}
-        </>
-      )}
+    <>
+      <NavBar defaultUrl={defaultUrl} setResume={setResume} />
 
-      <hr className="paper-size" />
+      <main className="paper">
+        {resume.basics && (
+          <>
+            <h1>{resume.basics.name}</h1>
+            {resume.basics.label && <h2>{resume.basics.label}</h2>}
+          </>
+        )}
 
-      {resume.basics && <Basics data={resume.basics} />}
-      {resume.skills && <Skills data={resume.skills} />}
-      {resume.languages && <Languages data={resume.languages} />}
-      {resume.projects && <Projects data={resume.projects} />}
-      {resume.experience && <Experience data={resume.experience} />}
-      {resume.education && <Education data={resume.education} />}
-      {resume.certificates && <Certificates data={resume.certificates} />}
-      {resume.work && <Work data={resume.work} />}
-      {resume.interests && <Interests data={resume.interests} />}
-    </main>
+        <hr className="paper-size" />
+
+        {resume.basics && <Basics data={resume.basics} />}
+        {resume.skills && <Skills data={resume.skills} />}
+        {resume.languages && <Languages data={resume.languages} />}
+        {resume.projects && <Projects data={resume.projects} />}
+        {resume.experience && <Experience data={resume.experience} />}
+        {resume.education && <Education data={resume.education} />}
+        {resume.certificates && <Certificates data={resume.certificates} />}
+        {resume.work && <Work data={resume.work} />}
+        {resume.interests && <Interests data={resume.interests} />}
+      </main>
+    </>
   );
 }
 

@@ -1,3 +1,9 @@
+@media print {
+  nav {
+    display: none;
+  }
+}
+
 h1 {
   font-size: 20pt;
   font-weight: bold;
@@ -22,6 +28,24 @@ strong {
 em {
   font-style: italic;
 }
+
+/* Navbar height control */
+
+nav {
+  height: var(--paper-margin);
+}
+
+.paper {
+  top: var(--paper-margin);
+}
+
+@media print {
+  .paper {
+    top: 0;
+  }
+}
+
+/* Control display, visibility, opacity of sections */
 
 #certificates,
 #interests,
