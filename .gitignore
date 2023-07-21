@@ -26,3 +26,4 @@ dist-ssr
 # User added
 .env
 .env.*
+.*.env

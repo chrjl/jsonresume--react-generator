@@ -5,6 +5,7 @@
 .title {
   font-size: 12pt;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .subtitle {

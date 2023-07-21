@@ -16,10 +16,10 @@ function Projects({ data }) {
           <VerticalCard
             key={index}
             title={name}
-            subtitle={<HorizontalList items={keywords} />}
+            subtitle={keywords && <HorizontalList items={keywords} />}
             description={
               <>
-                {url && (
+                {url.length > 0 && (
                   <div className={projects.url}>
                     {url.split(',').map((url, index) => (
                       <a key={index} href={url.trim()}>

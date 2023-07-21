@@ -31,6 +31,8 @@ em {
   display: none;
 }
 
+/* Fix first column width in DefinitionTable, to match sections */
+
 #skills,
 #languages {
   & td:first-child {
@@ -38,9 +40,17 @@ em {
   }
 }
 
-/* Hack to remove VerticalCard bottom padding from container */
+/* Set vertical spacing of VerticalCard */
+
+#education > div,
+#projects > div,
+#interests > div {
+  margin-bottom: 2em;
+}
+
+/* Then use the following hack to remove VerticalCard bottom padding from container */
 
 #projects,
 #education {
-  margin-bottom: -2.5em;
+  margin-bottom: -2em;
 }

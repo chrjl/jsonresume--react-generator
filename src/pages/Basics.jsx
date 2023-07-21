@@ -7,10 +7,10 @@ function Basics({ data }) {
   const { city, region, countryCode: country } = location;
 
   const contactItems = [
-    <a href={`mailto:${email}`}>{email}</a>,
+    email && <a href={`mailto:${email}`}>{email}</a>,
     phone,
-    <a href={url}>{url}</a>,
-  ];
+    url && <a href={url}>{url}</a>,
+  ].filter((item) => item !== undefined);
 
   const profileItems = profiles
     ? profiles
