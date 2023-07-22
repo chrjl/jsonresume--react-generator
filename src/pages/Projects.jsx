@@ -29,7 +29,11 @@ function Projects({ data }) {
                   </div>
                 )}
                 {description && (
-                  <div className={projects.description}>{description}</div>
+                  <div className={projects.description}>
+                    {description.split('\n').map((content, index) => (
+                      <p key={index}>{content}</p>
+                    ))}
+                  </div>
                 )}
               </>
             }
