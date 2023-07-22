@@ -6,8 +6,6 @@
   --content-width: calc(var(--paper-width) - 2 * var(--paper-margin));
 
   background-color: black;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 10pt;
 }
 
 .paper {

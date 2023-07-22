@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
 @media print {
   nav {
     display: none;
   }
+}
+
+:root {
+  font-family: Arimo, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
 }
 
 h1 {
@@ -32,6 +40,12 @@ em {
 a {
   color: #2563EB;
 }
+
+code {
+  font-family: Cousine, 'Courier New', Courier, monospace;
+}
+
+/* Navbar height control */
 
 nav {
   height: var(--paper-margin);
