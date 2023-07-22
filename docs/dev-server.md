@@ -1,12 +1,14 @@
 # Run the dev server
 
-Copy a [JSON resume](https://jsonresume.org) to `src/assets/resume.json` (or modify the [sample](src/assets/resume.json) provided). The Docker Compose service mounts `$DOCKER_RESUME_FILE` to the correct location in the working directory.
+Copy [JSON resume](https://jsonresume.org) files to the `public/` directory (or modify the [sample](public/resume.json) provided). The Docker Compose service mounts `$DOCKER_RESUME_FILE` to `public/resume.json`.
 
 Then, run the dev server and access at `http://localhost:5173`.
 
 ```console
 $ npm run dev [--host]
 ```
+
+The server will first attempt to render `resume.json`, but the URL to any JSON file can be provided. Files in the `public/` directory will be served under the app's URL root (i.e. a resume file saved to `public/resume.json` can be fetched at the URL `/resume.json`), and can be loaded into the app via URL. There is also the option to upload a local JSON file.
 
 ## As a Docker Compose service
 

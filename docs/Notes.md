@@ -7,17 +7,23 @@ JSON Resume theme (<https://jsonresume.org/themes/>)
 Tags
 : React, JSX, CSS modules
 
-> TODO: [[components]]
+> TODO: [[components-rendering]]
 >
 > - [x] `HorizontalCard`
 > - [x] `DefinitionTable`
 > - [ ] Turn `VerticalCard` components (`Education`, `Projects`) into flex containers
 
-> TODO: [[resume]] schema
+> TODO: document [[resume]] schema
 >
-> - [ ] Projects: url - split comma-separated list
+> - [ ] Projects: url - split comma-separated text
+> - [ ] Projects: description - split `\n`-separated text
 > - [ ] Experience &rarr; `<WorkCard>`
 > - [ ] Work: department
+ 
+> TODO: preprocess [[resume]] schema
+>
+> - [ ] all sections into standardized fields: title, subtitle, categories (definition list/table), description, highlights (list)
+> - [ ] components
 
 > TODO: toggles
 >
@@ -30,9 +36,22 @@ Tags
 >
 > - [ ] migrate to Typescript
 
+> TODO: layout
+>
+> - [ ] Basics: split into two lines if there is more than one profile
+
 ## App
 
 Render React (ab)using CSS to force the app into paper size (using border box sizing, and width and padding specified in inches) and present a page that can be printed exactly as seen in browser.
+
+### Resume file
+
+Resume data is rendered from the `resume` object, stored as a React state variable.
+
+- On first load, the app tries to render the file at `public/resume.json` by fetching URL `/resume.json`.
+- [ ] TODO: Button to load/refresh from URL
+- [ ] TODO: Button to upload local file
+- [ ] TODO: JSON editor
 
 ### Authoring
 

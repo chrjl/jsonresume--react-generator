@@ -8,17 +8,18 @@
 - Paper sizing (`styles/paper.css`)
 
   - Paper width and margins are set by CSS variables, and are easily modified.
-  - First page preview marker, via styled `<hr>`, shows the first page  bottom margin (to end of first page).
-  
+  - First page preview marker, via styled `<hr>`, shows the first page bottom margin (to end of first page).
+
     Inner text is centered using `display:flex`. The preview is prevented from printing via media query.
 
 - Global app stypes (`styles/App.css`)
 
 ### Component styling
 
-Components use CSS modules with CSS nesting.
+Components use CSS modules with CSS nesting. PostCSS plugin `postcss-nesting` is used to polyfill for browsers that don't support nesting (i.e. Firefox).
 
-> **Note:** > [CSS nesting browser support](https://caniuse.com/css-nesting)
+> **Note:**
+> Native [browser support](https://caniuse.com/css-nesting) for nesting
 >
 > - Chrome (I am using 114): Supported since version 112
 > - Firefox (I am using 115): Supported, but not enabled by default, since version 115 (available behind the `layout.nesting.css.enabled` flag).
