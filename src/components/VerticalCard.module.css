@@ -38,18 +38,18 @@
   & a {
     display: block;
     font-size: 9pt;
+    
+    &:last-child {
+      margin-bottom: 1em;
+    }
   }
 }
 
 .highlights {
-  margin-top: 1em;
+  margin-top: 0.5em;
 
   & ul {
     list-style: outside;
     padding-left: 1.25em; /* default is 2.5em (40px) */
-  }
-
-  & li:not(:last-child) {
-    padding-bottom: 0.25em;
   }
 }

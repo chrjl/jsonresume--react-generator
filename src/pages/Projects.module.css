@@ -1,3 +1,7 @@
 .description {
   margin-top: 1em;
+  
+  & p {
+    margin-top: 0.25em;
+  }
 }

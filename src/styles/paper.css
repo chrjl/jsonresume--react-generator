@@ -19,6 +19,7 @@
   box-sizing: border-box;
   width: var(--paper-width);
   padding: var(--paper-margin);
+  padding-bottom: 0;
   min-height: var(--paper-height);
 }
 

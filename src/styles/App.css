@@ -29,7 +29,9 @@ em {
   font-style: italic;
 }
 
-/* Navbar height control */
+a {
+  color: #2563EB;
+}
 
 nav {
   height: var(--paper-margin);
@@ -69,12 +71,12 @@ nav {
 #education > div,
 #projects > div,
 #interests > div {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 /* Then use the following hack to remove VerticalCard bottom padding from container */
 
 #projects,
 #education {
-  margin-bottom: -2em;
+  margin-bottom: -1.5em;
 }

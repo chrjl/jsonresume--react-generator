@@ -2,6 +2,10 @@
   margin-top: 1.5em;
 }
 
+.header {
+  margin-bottom: 0.5em;  
+}
+
 .title {
   font-size: 12pt;
   font-weight: bold;
