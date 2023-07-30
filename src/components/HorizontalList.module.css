@@ -1,4 +1,49 @@
-.container {
+.justifyLeft {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: text-bottom;
+  line-height: normal;
+
+  & ul {
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  & li {
+    border-left: solid black 2px;
+    padding: 0 10px;
+  }
+
+  & li:last-child {
+    padding-right: 0;
+  }
+}
+
+.justifyRight {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: text-bottom;
+  line-height: normal;
+
+  & ul {
+    margin-right: -12px;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+  }
+
+  & li {
+    border-right: solid black 2px;
+    padding: 0 10px;
+  }
+
+  & li:first-child {
+    padding-left: 0;
+  }
+}
+
+.legacy {
   white-space: nowrap;
 
   & ul {

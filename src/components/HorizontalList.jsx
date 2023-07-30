@@ -1,18 +1,38 @@
 import PropTypes from 'prop-types';
 
-import * as horizontalList from './HorizontalList.module.css';
+import * as styles from './HorizontalList.module.css';
 
-function HorizontalList(props) {
-  const { items = [] } = props;
-
+function HorizontalList({ items }) {
   return (
-    <span className={horizontalList.container}>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </span>
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default function HorizontalListLeft({ items }) {
+  return (
+    <div className={styles.justifyLeft}>
+      <HorizontalList items={items} />
+    </div>
+  );
+}
+
+export function HorizontalListRight({ items }) {
+  return (
+    <div className={styles.justifyRight}>
+      <HorizontalList items={items} />
+    </div>
+  );
+}
+
+export function HorizontalListLegacy({ items }) {
+  return (
+    <div className={styles.legacy}>
+      <HorizontalList items={items} />
+    </div>
   );
 }
 
@@ -20,4 +40,6 @@ HorizontalList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
-export default HorizontalList;
+HorizontalListLeft.propTypes = HorizontalList.propTypes;
+HorizontalListRight.propTypes = HorizontalList.propTypes;
+HorizontalListLegacy.propTypes = HorizontalList.propTypes;
