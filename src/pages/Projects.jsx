@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import ReactMarkdown from 'react-markdown';
-import HorizontalList from '../components/HorizontalList';
+import { HorizontalListRight as HorizontalList } from '../components/HorizontalList';
 import VerticalCard from '../components/VerticalCard';
 
 import * as projects from './Projects.module.css';
