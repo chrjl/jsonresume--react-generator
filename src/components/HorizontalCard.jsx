@@ -8,9 +8,7 @@ function HorizontalCard(props) {
     <div className={horizontalCard.container}>
       <div className={horizontalCard.header}>
         <span className={horizontalCard.title}>{title}</span>
-        {subtitle && (
-          <span className={horizontalCard.subtitle}>{subtitle}</span>
-        )}
+        {subtitle}
       </div>
 
       <div className={horizontalCard.description}>{description}</div>

@@ -34,7 +34,7 @@ function WorkCard(props) {
       </>
     ),
     department,
-    dates: (startDate && `${startDate} to `) + endDate,
+    dates: (startDate && `${startDate} to `) + (endDate || 'current'),
   };
 
   const subtitle = (
