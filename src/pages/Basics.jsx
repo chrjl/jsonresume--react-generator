@@ -4,32 +4,45 @@ import * as basics from './Basics.module.css';
 
 function Basics({ data }) {
   const { location, email, phone, url, profiles } = data;
+
+  return (
+    <section id="basics" className={basics.container}>
+      <Contact email={email} phone={phone} url={url} profiles={profiles} />
+
+      {location && <Address location={location} />}
+    </section>
+  );
+}
+
+function Address({ location }) {
   const { city, region, countryCode: country } = location;
+
+  return (
+    <div id="address">
+      {[city, region, country].filter((item) => item !== undefined).join(', ')}
+    </div>
+  );
+}
+
+function Contact(props) {
+  const { email, phone, url, profiles } = props;
 
   const contactItems = [
     email && <a href={`mailto:${email}`}>{email}</a>,
     phone,
-    url && <a href={url}>{url}</a>,
   ].filter((item) => item !== undefined);
 
-  const profileItems = profiles
-    ? profiles
-        .filter((profile) => profile.url)
-        .map((profile) => <a href={profile.url}>{profile.url}</a>)
-    : [];
+  const profileItems = [url, ...profiles?.map((profile) => profile.url)]
+    .filter((url) => Boolean(url))
+    .map((url) => <a href={url}>{url}</a>);
 
   return (
-    <section id="basics" className={basics.container}>
-      <div id="contact">
-        <HorizontalList items={[...contactItems, ...profileItems]} />
-      </div>
-
-      <div id="address">
-        {[city, region, country]
-          .filter((item) => item !== undefined)
-          .join(', ')}
-      </div>
-    </section>
+    <HorizontalList
+      items={[
+        <HorizontalList items={contactItems} />,
+        <HorizontalList items={profileItems} />,
+      ]}
+    />
   );
 }
 
