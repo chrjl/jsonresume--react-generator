@@ -6,9 +6,17 @@ function Interests({ data }) {
     <section id="interests">
       <h3>Interests</h3>
 
-      {data.map(({ name, keywords }, index) => (
-        <VerticalCard key={index} title={name} highlights={keywords} />
-      ))}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridRowGap: '1em',
+        }}
+      >
+        {data.map(({ name, keywords }, index) => (
+          <VerticalCard key={index} title={name} highlights={keywords} />
+        ))}
+      </div>
     </section>
   );
 }

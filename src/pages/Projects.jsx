@@ -11,38 +11,43 @@ function Projects({ data }) {
     <section id="projects">
       <h3>Portfolio highlights</h3>
 
-      {data.map(
-        ({ name, keywords, description, url = [], highlights = [] }, index) => (
-          <VerticalCard
-            key={index}
-            title={name}
-            subtitle={keywords && <HorizontalList items={keywords} />}
-            description={
-              <>
-                {url.length > 0 && (
-                  <div className={projects.url}>
-                    {url.split(',').map((url, index) => (
-                      <a key={index} href={url.trim()}>
-                        {url.trim()}
-                      </a>
-                    ))}
-                  </div>
-                )}
-                {description && (
-                  <div className={projects.description}>
-                    {description.split('\n').map((content, index) => (
-                      <p key={index}>{content}</p>
-                    ))}
-                  </div>
-                )}
-              </>
-            }
-            highlights={highlights.map((highlight) => (
-              <ReactMarkdown children={highlight} />
-            ))}
-          />
-        )
-      )}
+      <div className={projects.container}>
+        {data.map(
+          (
+            { name, keywords, description, url = [], highlights = [] },
+            index
+          ) => (
+            <VerticalCard
+              key={index}
+              title={name}
+              subtitle={keywords && <HorizontalList items={keywords} />}
+              description={
+                <>
+                  {url.length > 0 && (
+                    <div className={projects.url}>
+                      {url.split(',').map((url, index) => (
+                        <a key={index} href={url.trim()}>
+                          {url.trim()}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                  {description && (
+                    <div className={projects.description}>
+                      {description.split('\n').map((content, index) => (
+                        <p key={index}>{content}</p>
+                      ))}
+                    </div>
+                  )}
+                </>
+              }
+              highlights={highlights.map((highlight) => (
+                <ReactMarkdown children={highlight} />
+              ))}
+            />
+          )
+        )}
+      </div>
     </section>
   );
 }

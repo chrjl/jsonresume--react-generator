@@ -3,20 +3,24 @@ import PropTypes from 'prop-types';
 import VerticalCard from '../components/VerticalCard';
 import HorizontalList from '../components/HorizontalList';
 
+import * as styles from './Education.module.css';
+
 function Education({ data }) {
   return (
     <section id="education">
       <h3>Education</h3>
 
-      {data.map(({ institution, studyType, endDate, area }, index) => (
-        <VerticalCard
-          key={index}
-          title={institution}
-          description={
-            <HorizontalList items={[`${studyType} (${endDate})`, area]} />
-          }
-        />
-      ))}
+      <div className={styles.container}>
+        {data.map(({ institution, studyType, endDate, area }, index) => (
+          <VerticalCard
+            key={index}
+            title={institution}
+            description={
+              <HorizontalList items={[`${studyType} (${endDate})`, area]} />
+            }
+          />
+        ))}
+      </div>
     </section>
   );
 }
