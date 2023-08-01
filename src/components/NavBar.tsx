@@ -4,11 +4,22 @@ import * as styles from './NavBar.module.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-export default function NavBar({ defaultUrl, setResume }: NavBarProps) {
+export default function NavBar({
+  defaultUrl,
+  setResume,
+  setShowSideBar,
+}: NavBarProps) {
   return (
     <nav className={styles.container}>
       <div>
+        <button
+          type="button"
+          onClick={() => setShowSideBar((showSideBar) => !showSideBar)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
         <DataSourcePicker defaultUrl={defaultUrl} setResume={setResume} />
       </div>
 
@@ -114,7 +125,7 @@ function DataSourcePicker({ defaultUrl, setResume }: DataSourcePickerProps) {
 interface NavBarProps {
   defaultUrl: string;
   setResume: React.Dispatch<React.SetStateAction<string>>;
-  // setShowSideBar: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowSideBar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 interface DataSourcePickerProps {

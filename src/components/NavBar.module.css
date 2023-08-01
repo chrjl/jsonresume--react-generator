@@ -36,3 +36,10 @@ nav.container {
     float: right;
   }
 }
+
+aside.container {
+  top: var(--paper-margin);
+  height: var(--paper-margin);
+  font-size: 10pt;
+  line-height: var(--paper-margin);
+}
