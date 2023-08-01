@@ -1,5 +1,9 @@
 # Components for rendering
 
+## Controlling visibility of sections
+
+JSX is to conditionally render components according to the `showSection` state variable (rather than using CSS to set display style).
+
 ## Header
 
 - [x] Non-reusable component that depends on specifics of the `basics` section.
@@ -8,7 +12,7 @@
 
 Accept "anything that can be rendered" (`PropTypes.node`) as props and format using CSS modules.
 
-- [x] `HorizontalList`: navbar style horizontal list from array of nodes
+- [x] `HorizontalList`: flex container with internal separators, capable of line wrapping. Generated from from array of nodes.
 
   ```js
   HorizontalList.propTypes = {
@@ -18,7 +22,12 @@ Accept "anything that can be rendered" (`PropTypes.node`) as props and format us
 
   **Items:** `<li style="display:inline">` elements
 
-  **Delimiters and spacing:** set by CSS pseudoclass `li::before`
+  **Delimiters and spacing:** set by CSS pseudoclass `li::before`, the entire list is wrapped into a super container, with a negative margin to cut off separators outside the desired area.
+  
+  **Variants:**
+  
+  - `HorizontalListLeft` (default)
+  - `HorizontalListRight`
 
 - [x] `VerticalCard`: grid stackable components for multi column layout
 

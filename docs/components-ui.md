@@ -2,21 +2,12 @@
 
 ## NavBar
 
-The navbar is used to control what is being rendered.
+The `<NavBar>` component is used to control data sources and set the `resume` state variable.
 
-- Data source: url or file
-- Section visibility
+Internally, the `<DataSourcePicker>` component first allows the user to choose the data source type (url or file), then uses `<input>` elements to either fetch (url source) or read (file source) a JSON object. After parsing, the `resume` object is is stored in state.
 
-  - [ ] Display
-  - [ ] Dimming
-  - [ ] Filtering: show all/ hide items marked as hidden
+## SideBar
 
-### Data sources
+The `<SideBar>` component is used to control what is rendered by setting the `showSection` state variable.
 
-The navbar first allows the user to choose the data source (url or file) and saves this choice to state. After data is parsed from JSON, the `resume` object is is stored in state.
-
-- [x] Data is read from URL via the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
-
-  <https://github.com/jsonresume/jsonresume-fake> hosts some sample resumes.
-
-- [x] Data is read from file via the [File API](https://developer.mozilla.org/en-US/docs/Web/API/File_API)
+Internally, a set of checkbox `<input>` elements is used, one for each section.

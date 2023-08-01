@@ -1,8 +1,6 @@
-# Resume formatting
+# Styling
 
-## Styling
-
-### Global styling
+## Global styling
 
 - CSS reset (`styles/reset.css`)
 - Paper sizing (`styles/paper.css`)
@@ -13,6 +11,16 @@
     Inner text is centered using `display:flex`. The preview is prevented from printing via media query.
 
 - Global app stypes (`styles/App.css`)
+
+### Fonts
+
+Default fonts (Arimo, Cousine) are self-hosted. The fonts are installed to the project using the Fontsource project's packages.
+
+Font Awesome React components are used for icons (`react-fontawesome`).
+
+## App styling
+
+Render React (ab)using CSS to force the app into paper size (using border box sizing, and width and padding specified in inches) and present a page that can be printed exactly as seen in browser.
 
 ### Component styling
 
@@ -26,7 +34,7 @@ Components use CSS modules with CSS nesting. PostCSS plugin `postcss-nesting` is
 >
 >   Will be supported by default from version 117.
 
-Overriding styles for specific sections: use the global `App.css` file and override the files using the `id` of the section (see: [[authoring]]).
+Overriding styles for specific sections: use the global `App.css` file and override the files using the `id` of the section.
 
 ## Text formatting
 
