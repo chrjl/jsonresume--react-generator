@@ -1,27 +1,38 @@
-.container {
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: black;
+@media print {
+  nav,
+  aside {
+    display: none;
+  }
 }
 
-.content {
+.container {
+  z-index: 9999;
+  background-color: black;
+  color: white;
+
+  position: fixed;
   width: var(--paper-width);
-  height: var(--paper-margin);
-  display: flex;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  vertical-align: middle;
+}
+
+nav.container {
+  top: 0;
+  height: var(--paper-margin);
+  justify-content: space-between;
+
+  & * {
+    display: inline-block;
+  }
 
   & form[name='source'] {
-    display: inline-block;
     text-align: left;
     margin: auto 0;
   }
 
-  & a {
-    display: inline;
-    margin-left: auto;
-    height: 100%;
+  & .icons {
+    font-size: var(--paper-margin);
+    float: right;
   }
 }
