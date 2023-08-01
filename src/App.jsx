@@ -4,6 +4,11 @@ import './styles/paper.css';
 import './styles/App.css';
 
 import NavBar from './components/NavBar';
+import '@fontsource/arimo/latin-400.css';
+import '@fontsource/arimo/latin-400-italic.css';
+import '@fontsource/arimo/latin-700.css';
+import '@fontsource/cousine/latin-400.css';
+import '@fontsource/cousine/latin-700.css';
 import Basics from './pages/Basics';
 import Certificates from './pages/Certificates';
 import Education from './pages/Education';

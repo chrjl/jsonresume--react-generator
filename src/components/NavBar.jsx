@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import * as navBar from './NavBar.module.css';
-import githubLogo from '../assets/github-mark-white.svg';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function NavBar(props) {
   const { defaultUrl, setResume } = props;
@@ -54,7 +56,7 @@ function NavBar(props) {
           href="https://github.com/chrjl/jsonresume--react-generator"
           target="_blank"
         >
-          <img src={githubLogo} alt="github" height="100%"></img>
+          <FontAwesomeIcon icon={faGithub} style={{ color: '#ffffff' }} />
         </a>
       </div>
     </nav>
