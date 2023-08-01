@@ -16,7 +16,12 @@ function Education({ data }) {
             key={index}
             title={institution}
             description={
-              <HorizontalList items={[`${studyType} (${endDate})`, area]} />
+              <HorizontalList
+                items={[
+                  endDate ? `${studyType} (${endDate})` : studyType,
+                  area,
+                ]}
+              />
             }
           />
         ))}

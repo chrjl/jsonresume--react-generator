@@ -5,7 +5,9 @@ import DefinitionTable from '../components/DefinitionTable';
 
 function Languages({ data }) {
   const description = data
-    .map(({ language, fluency }) => `${language} *(${fluency})*`)
+    .map(({ language, fluency }) =>
+      fluency ? `${language} *(${fluency})*` : language
+    )
     .join(', ');
 
   return (
@@ -23,7 +25,7 @@ function Languages({ data }) {
 }
 
 Languages.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string),
+  data: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Languages;
