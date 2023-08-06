@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/arimo": "^5.0.5",
-    "@fontsource/cousine": "^5.0.5",
+    "@fontsource/arimo": "^5.0.8",
+    "@fontsource/cousine": "^5.0.8",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -23,19 +23,19 @@
     "react-markdown": "^8.0.7"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
+    "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
-    "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.8.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.27",
-    "postcss-nesting": "^12.0.0",
+    "postcss-nesting": "^12.0.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.4"
+    "vite": "^4.4.8"
   }
 }
