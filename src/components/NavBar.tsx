@@ -2,9 +2,8 @@ import { useState } from 'react';
 
 import * as styles from './NavBar.module.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function NavBar({
   defaultUrl,
@@ -18,7 +17,7 @@ export default function NavBar({
           type="button"
           onClick={() => setShowSideBar((showSideBar) => !showSideBar)}
         >
-          <FontAwesomeIcon icon={faBars} />
+          <MenuIcon />
         </button>
         <DataSourcePicker defaultUrl={defaultUrl} setResume={setResume} />
       </div>
@@ -29,7 +28,7 @@ export default function NavBar({
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} style={{ color: '#ffffff' }} />
+          <GitHubIcon />
         </a>
       </div>
     </nav>
