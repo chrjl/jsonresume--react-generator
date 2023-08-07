@@ -19,7 +19,7 @@
     
     &.subtitle {
       font-size: 9pt;
-      opacity: 60%;
+      color: #666666;
       flex-grow: 1;
       text-align: right;
     }

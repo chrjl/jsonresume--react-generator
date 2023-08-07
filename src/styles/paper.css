@@ -1,7 +1,7 @@
 :root {
   --paper-width: 8.5in;
   --paper-height: 11in;
-  --paper-margin: 0.25in;
+  --paper-margin: 0.5in;
   --content-height: calc(var(--paper-height) - 2 * var(--paper-margin));
   --content-width: calc(var(--paper-width) - 2 * var(--paper-margin));
 

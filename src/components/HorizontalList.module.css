@@ -5,13 +5,13 @@
   line-height: normal;
 
   & ul {
-    margin-left: -12px;
+    margin-left: -11px;
     display: flex;
     flex-wrap: wrap;
   }
 
   & li {
-    border-left: solid black 2px;
+    border-left: solid black 1px;
     padding: 0 10px;
   }
 
@@ -27,15 +27,15 @@
   line-height: normal;
 
   & ul {
-    margin-right: -12px;
+    margin-right: -9px;
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
   }
 
   & li {
-    border-right: solid black 2px;
-    padding: 0 10px;
+    border-right: solid 2px;
+    padding: 0 7px;
   }
 
   & li:first-child {
