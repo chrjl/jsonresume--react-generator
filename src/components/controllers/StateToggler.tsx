@@ -5,7 +5,7 @@ interface StateTogglerProps {
   setState: React.Dispatch<React.SetStateAction<BooleanStateObject>>;
 }
 
-interface BooleanStateObject {
+export interface BooleanStateObject {
   [key: string]: boolean;
 }
 

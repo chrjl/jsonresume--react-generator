@@ -36,18 +36,6 @@ code {
   font-family: Cousine, 'Courier New', Courier, monospace;
 }
 
-/* Navbar height control */
-
-.paper {
-  top: calc(2 * var(--paper-margin));
-}
-
-@media print {
-  .paper {
-    top: 0;
-  }
-}
-
 /* Fix first column width in DefinitionTable, to match sections */
 
 #skills,

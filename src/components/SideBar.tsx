@@ -1,4 +1,4 @@
-import StateToggler from './controllers/StateToggler';
+import StateToggler, { BooleanStateObject } from './controllers/StateToggler';
 import DataSourceController from './controllers/DataSourceController';
 
 import * as styles from './AppBars.module.css';
@@ -6,8 +6,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
 
 interface SideBarProps {
-  sections: object;
-  setSections: React.Dispatch<React.SetStateAction<object>>;
+  sections: BooleanStateObject;
+  setSections: React.Dispatch<React.SetStateAction<BooleanStateObject>>;
   defaultUrl: string;
   setResume: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -21,7 +21,7 @@ export default function SideBar({
   return (
     <aside id="aside" className={styles.sidebar}>
       <div className={styles.controllerContainer}>
-        <details>
+        <details open>
           <summary>Data source</summary>
           <div className={styles.controller}>
             <DataSourceController
@@ -31,7 +31,7 @@ export default function SideBar({
           </div>
         </details>
 
-        <details>
+        <details open>
           <summary>Sections</summary>
           <div className={styles.controllers}>
             <StateToggler state={sections} setState={setSections} />

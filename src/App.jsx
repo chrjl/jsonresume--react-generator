@@ -25,7 +25,7 @@ import Work from './pages/Work';
 let didInit = false;
 const defaultUrl = 'resume.json';
 
-const sections = {
+const initialSections = {
   basics: true,
   skills: true,
   languages: true,
@@ -39,8 +39,7 @@ const sections = {
 
 export default function App() {
   const [resume, setResume] = useState({});
-  const [showSideBar, setShowSideBar] = useState(false);
-  const [showSections, setShowSections] = useState(sections);
+  const [sections, setSections] = useState(initialSections);
 
   // initialize app by fetching a sample
   useEffect(() => {
@@ -62,14 +61,12 @@ export default function App() {
 
   return (
     <>
-      <NavBar
+      <SideBar
+        sections={sections}
+        setSections={setSections}
         defaultUrl={defaultUrl}
         setResume={setResume}
-        setShowSideBar={setShowSideBar}
       />
-      {showSideBar && (
-        <SideBar sections={showSections} setSections={setShowSections} />
-      )}
 
       <main className="paper">
         {resume.basics && (
@@ -81,29 +78,25 @@ export default function App() {
 
         <hr className="paper-size" />
 
-        {resume.basics && showSections.basics && (
-          <Basics data={resume.basics} />
-        )}
-        {resume.skills && showSections.skills && (
-          <Skills data={resume.skills} />
-        )}
-        {resume.languages && showSections.languages && (
+        {resume.basics && sections.basics && <Basics data={resume.basics} />}
+        {resume.skills && sections.skills && <Skills data={resume.skills} />}
+        {resume.languages && sections.languages && (
           <Languages data={resume.languages} />
         )}
-        {resume.projects && showSections.projects && (
+        {resume.projects && sections.projects && (
           <Projects data={resume.projects} />
         )}
-        {resume.experience && showSections.experience && (
+        {resume.experience && sections.experience && (
           <Experience data={resume.experience} />
         )}
-        {resume.education && showSections.education && (
+        {resume.education && sections.education && (
           <Education data={resume.education} />
         )}
-        {resume.certificates && showSections.certificates && (
+        {resume.certificates && sections.certificates && (
           <Certificates data={resume.certificates} />
         )}
-        {resume.work && showSections.work && <Work data={resume.work} />}
-        {resume.interests && showSections.interests && (
+        {resume.work && sections.work && <Work data={resume.work} />}
+        {resume.interests && sections.interests && (
           <Interests data={resume.interests} />
         )}
       </main>
