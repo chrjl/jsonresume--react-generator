@@ -16,8 +16,12 @@ services:
         source: .
         target: ${DOCKER_WORKDIR}
       - type: bind
-        source: ${DOCKER_RESUME_FILE}
+        source: ${DOCKER_RESUME_DIR}/resume.json
         target: ${DOCKER_WORKDIR}/public/resume.json
+        read_only: true
+      - type: bind
+        source: ${DOCKER_RESUME_DIR}/coverletter.md
+        target: ${DOCKER_WORKDIR}/public/coverletter.md
         read_only: true
     ports:
       - 5173

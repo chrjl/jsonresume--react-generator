@@ -1,5 +1,6 @@
 import StateToggler, { BooleanStateObject } from './controllers/StateToggler';
 import DataSourceController from './controllers/DataSourceController';
+import MarkdownSourceController from './controllers/MarkdownSourceController';
 
 import * as styles from './AppBars.module.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -22,10 +23,20 @@ export default function SideBar({
     <aside id="aside" className={styles.sidebar}>
       <div className={styles.controllerContainer}>
         <details open>
-          <summary>Data source</summary>
+          <summary>Resume source</summary>
           <div className={styles.controller}>
             <DataSourceController
               defaultUrl={defaultUrl}
+              setResume={setResume}
+            />
+          </div>
+        </details>
+
+        <details open>
+          <summary>Cover letter</summary>
+          <div className={styles.controller}>
+            <MarkdownSourceController
+              // defaultUrl={defaultUrl}
               setResume={setResume}
             />
           </div>

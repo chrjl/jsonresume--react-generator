@@ -18,6 +18,7 @@ import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
 
 import Basics from './pages/Basics';
+import Text from './pages/Text.tsx';
 import Certificates from './pages/Certificates';
 import Education from './pages/Education';
 import Experience from './pages/Experience';
@@ -41,6 +42,7 @@ const initialSections = {
   projects: true,
   work: true,
   interests: true,
+  text: true,
 };
 
 export default function App() {
@@ -105,6 +107,8 @@ export default function App() {
         {resume.interests && sections.interests && (
           <Interests data={resume.interests} />
         )}
+
+        {resume.text && sections.text && <Text body={resume.text} />}
       </main>
     </>
   );
