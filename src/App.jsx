@@ -26,6 +26,7 @@ let didInit = false;
 const defaultUrl = 'resume.json';
 
 const initialSections = {
+  label: true,
   basics: true,
   skills: true,
   languages: true,
@@ -72,12 +73,12 @@ export default function App() {
         {resume.basics && (
           <>
             <h1>{resume.basics.name}</h1>
-            {resume.basics.label && <h2>{resume.basics.label}</h2>}
           </>
         )}
 
         <hr className="paper-size" />
 
+        {resume.basics && sections.label && <h2>{resume.basics.label}</h2>}
         {resume.basics && sections.basics && <Basics data={resume.basics} />}
         {resume.skills && sections.skills && <Skills data={resume.skills} />}
         {resume.languages && sections.languages && (
