@@ -1,20 +1,26 @@
 :root {
-  font-family: Arimo, Arial, Helvetica, sans-serif;
   font-size: 10pt;
+  --root-font: Arimo, Arial, Helvetica, sans-serif;
+  --title-font: Inter, var(--root-font);
+  --caps-font: 'Work Sans', var(--root-font);
+  font-family: var(--root-font);
 }
 
 h1 {
-  font-size: 22pt;
+  font-family: var(--title-font);
   font-weight: bold;
+  font-size: 22pt;
 }
 
 h2 {
-  font-size: 14pt;
+  font-family: var(--title-font);
   font-weight: bold;
+  font-size: 14pt;
 }
 
 h3 {
   font-size: 15pt;
+  font-family: var(--title-font);
   font-weight: bold;
   margin-top: 2em;
   margin-bottom: 1em;

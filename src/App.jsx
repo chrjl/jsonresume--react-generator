@@ -6,8 +6,13 @@ import './styles/App.css';
 import '@fontsource/arimo/latin-400.css';
 import '@fontsource/arimo/latin-400-italic.css';
 import '@fontsource/arimo/latin-700.css';
+import '@fontsource/arimo/latin-700-italic.css';
 import '@fontsource/cousine/latin-400.css';
 import '@fontsource/cousine/latin-700.css';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '@fontsource/work-sans/latin-600.css';
 
 import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
