@@ -21,6 +21,7 @@ function WorkCard(props) {
     name,
     location,
     department,
+    url,
     summary,
     highlights,
     startDate,
@@ -37,6 +38,7 @@ function WorkCard(props) {
     dates: startDate
       ? `${startDate} to ${endDate || 'current'}`
       : endDate || undefined,
+    url: url && <a href={url}>{url}</a>,
   };
 
   const subtitle = (
@@ -44,6 +46,7 @@ function WorkCard(props) {
       items={[
         subtitleItems.companyInfo,
         subtitleItems.department,
+        subtitleItems.url,
         subtitleItems.dates,
       ].filter((detail) => detail !== undefined)}
     />
