@@ -1,18 +1,21 @@
 .justifyLeft {
   display: inline-block;
   overflow: hidden;
-  vertical-align: text-bottom;
+  vertical-align: bottom;
   line-height: normal;
 
   & ul {
-    margin-left: -11px;
+    margin-left: -1.5em;
     display: flex;
     flex-wrap: wrap;
   }
 
-  & li {
-    border-left: solid black 1px;
-    padding: 0 10px;
+  & li::before {
+    content: '|';
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 1.5em;
   }
 
   & li:last-child {
@@ -23,19 +26,22 @@
 .justifyRight {
   display: inline-block;
   overflow: hidden;
-  vertical-align: text-bottom;
+  vertical-align: bottom;
   line-height: normal;
 
   & ul {
-    margin-right: -9px;
+    margin-right: -1.5em;
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
   }
 
-  & li {
-    border-right: solid 2px;
-    padding: 0 7px;
+  & li::after {
+    content: '|';
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 1.5em;
   }
 
   & li:first-child {

@@ -6,7 +6,7 @@ function HorizontalList({ items }) {
   return (
     <ul>
       {items.map((item, index) => (
-        <li key={index}>{item}</li>
+        item && <li key={index}>{item}</li>
       ))}
     </ul>
   );
