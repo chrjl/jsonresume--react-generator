@@ -1,0 +1,11 @@
+.categories, .projects {
+  padding-left: 1.5em;
+  margin: 1em auto;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.25in;
+  grid-row-gap: 2em;
+}
