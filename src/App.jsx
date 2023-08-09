@@ -35,10 +35,10 @@ const initialSections = {
   basics: true,
   skills: true,
   languages: true,
-  projects: true,
   experience: true,
   education: true,
   certificates: true,
+  projects: true,
   work: true,
   interests: true,
 };
@@ -89,9 +89,6 @@ export default function App() {
         {resume.languages && sections.languages && (
           <Languages data={resume.languages} />
         )}
-        {resume.projects && sections.projects && (
-          <Projects data={resume.projects} />
-        )}
         {resume.experience && sections.experience && (
           <Experience data={resume.experience} />
         )}
@@ -100,6 +97,9 @@ export default function App() {
         )}
         {resume.certificates && sections.certificates && (
           <Certificates data={resume.certificates} />
+        )}
+        {resume.projects && sections.projects && (
+          <Projects data={resume.projects} />
         )}
         {resume.work && sections.work && <Work data={resume.work} />}
         {resume.interests && sections.interests && (
